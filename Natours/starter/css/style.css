@@ -6,3 +6,34 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+/* universal selector to reset some basic styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* utilize inheritance for font*/
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #777;
+	padding: 30px;
+}
+
+.header {
+	/* 95% of view port height*/
+	height: 95vh;
+	background-image: linear-gradient(to right bottom, #7ed56fc1, #28b485c1),
+		url(../img/hero.jpg);
+	/* cover fits to the viewpoint width */
+	background-size: cover;
+	/* make sure it always line up to the top, bottom, or center*/
+	background-position: top;
+	/* x y position for the four corners from top left, top right, bottom right, bottom left or how many corner you want*/
+	/* check out clippy */
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
